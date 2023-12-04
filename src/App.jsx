@@ -1,18 +1,24 @@
+import  {puppyList} from './data.js'
 import { useState } from 'react'
+
 import './App.css'
-
+ 
 function App() {
-   useState
-
+  const [puppies, setPuppies] = useState(puppyList)
   return (
     <>
-      <div>
-        
+    {console.log("puppyList: ", puppyList)}
+      <div className="App">
+        { 
+        puppies.map((puppy) => {
+          return <p key={puppy.id}>{puppy.name}
+          </p>;
+
+        })
+        }
       </div>
       
-        <p>
-        
-        </p>
+       
 
      
     </>
